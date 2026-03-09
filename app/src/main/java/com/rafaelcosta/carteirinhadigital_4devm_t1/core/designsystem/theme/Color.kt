@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital_4devm_t1.ui.theme
+package com.rafaelcosta.carteirinhadigital_4devm_t1.core.designsystem.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF6B5E10)

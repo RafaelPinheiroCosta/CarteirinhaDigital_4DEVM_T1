@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital_4devm_t1
+package com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.component
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

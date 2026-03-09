@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.screen
+package com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -20,9 +20,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.carteirinhadigital_4devm_t1.R
+import com.rafaelcosta.carteirinhadigital_4devm_t1.core.designsystem.theme.CarteirinhaDigital_4DEVM_T1Theme
 import com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.component.LabelText
 import com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.component.QrCode
 import com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.component.ValueText
@@ -56,7 +58,7 @@ fun CarteirinhaScreen(modifier: Modifier = Modifier) {
             )
             Spacer(
                 modifier = Modifier
-                    .weight(.3f)
+                    .weight(.2f)
             )
             Image(
                 painter = painterResource(R.drawable.avatar_login),
@@ -108,5 +110,35 @@ fun CarteirinhaScreen(modifier: Modifier = Modifier) {
                     .fillMaxWidth(.6f)
             )
         }
+    }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun PreviewAppClaro() {
+    CarteirinhaDigital_4DEVM_T1Theme(darkTheme = false) {
+        CarteirinhaScreen(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(20.dp)
+        )
+    }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun PreviewAppEscuro() {
+    CarteirinhaDigital_4DEVM_T1Theme(darkTheme = true) {
+        CarteirinhaScreen(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(20.dp)
+        )
     }
 }
